@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ribbon-2 {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+  
+  /* inset: var(--t) calc(-1*var(--f)) auto auto; */
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(
+      0 0,
+    100% 0,
+    100% calc(100% - var(--f)),
+    /* calc(100% - var(--f)) 100%, */
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2)
+      );
+  background: rgb(43, 172, 43);
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --r: .8em; /* control the cutout */
+  
+  border-block: .5em solid #0000;
+  padding-inline: .5em calc(var(--r) + .25em);
+  line-height: 1.8;
+  clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - var(--r)) 50%,100% .25em);
+  background:
+   border-box,
+   rgb(43, 172, 43) padding-box; /* the color  */
+  width: fit-content;
+}
+
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px 40px;
+  padding-bottom: 40px;
+  gap: 40px;
+  -webkit-overflow-scrolling: touch; /* Smoother scrolling on iOS */
+
+  /* Optional: Hide scrollbar for a cleaner look */
+  /* For Webkit-based browsers (Chrome, Safari, etc.) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* For Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Individual items inside the container */
+.scroll-item {
+  flex-shrink: 0; /* Prevent items from shrinking */
+  width: 280px; /* Or any fixed width */
+  /* height: 150px; */
+  display: flex;
+}
+
+.ribbon-2 {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+  
+  /* inset: var(--t) calc(-1*var(--f)) auto auto; */
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(
+      0 0,
+    100% 0,
+    100% calc(100% - var(--f)),
+    /* calc(100% - var(--f)) 100%, */
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2)
+      );
+  background: rgb(43, 172, 43);
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --r: .8em; /* control the cutout */
+  
+  border-block: .5em solid #0000;
+  padding-inline: .5em calc(var(--r) + .25em);
+  line-height: 1.8;
+  clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - var(--r)) 50%,100% .25em);
+  background:
+   border-box,
+   rgb(38, 128, 38) padding-box; /* the color  */
+  width: fit-content;
+}
+
+
+.draft-ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.draft-ribbon::before,
+.draft-ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #450b59;
+}
+.draft-ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #450b59;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 700 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ribbon-top-right {
+  top: -10px;
+  right: -10px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+.slick-track {
+  display: flex!important;
+}

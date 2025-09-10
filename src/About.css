@@ -1,0 +1,149 @@
+body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #111;
+      background: #fff;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      background: url('your-hero-image.jpg') center/cover no-repeat;
+      color: #000000;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      /* max-width: 1000px; */
+      margin: auto;
+    }
+    .sectiony {
+      /* max-width: 900px; */
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .section h2, .sectiony h2 {
+      font-size: 32px;
+    }
+
+    .section p, .sectioy p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .about-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-columns img {
+      flex: 1;
+      width: 100%;
+      /* max-width: 400px; */
+      border-radius: 1rem;
+    }
+    .about-text {
+      flex: 2;
+    }
+ 
+.mission-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+/* .mission-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-marquee 40s linear infinite;
+} */
+
+.mission {
+  display: flex;
+  gap: 2rem;
+}
+
+.mission div {
+  background: #f5f5f5;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  color: #2e2c2a;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* @keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} */
+.testimonials {
+    font-size: 18px;
+  background: #fafafa;
+  padding: 3rem 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* .testimonial-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-testimonials 40s linear infinite;
+  width: max-content;
+} */
+
+.testimonial {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  /* min-width: 280px;
+  max-width: 300px; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* @keyframes scroll-testimonials {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} */
+    /* footer {
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .about-columns {
+        flex-direction: column;
+      }
+    } */

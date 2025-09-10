@@ -1,0 +1,1 @@
+export const trimText = (text: string, trimValue: number = 20) => text.length < trimValue ? text : text.slice(0, trimValue) + "...";
